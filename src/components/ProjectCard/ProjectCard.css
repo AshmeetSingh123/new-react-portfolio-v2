@@ -1,0 +1,100 @@
+.project-card{
+    background-color: var(--secondary) !important;
+    color: white !important;
+    margin-bottom: 10px;
+    border-radius: 10px !important;
+    min-width: 30%;
+}
+.project-card-image{
+    border-radius: 0px;
+    height: fit-content;
+}
+.project-card-content{
+    padding: 5px 10px 10px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.view-more-button{
+    height: fit-content !important;
+}
+.view-more-button:hover{
+    background-color: white;
+    color: var(--secondary);
+    box-shadow: rgba(255, 255, 255, 0.16) 0px 3px 6px,
+     rgba(255, 255, 255, 0.23) 0px 3px 6px;
+}
+
+.project-dialog .MuiDialog-container .MuiPaper-root{
+    max-width: 80vw;
+    max-height: 100vh;
+    background-color: var(--secondary) !important;
+    color: white;
+}
+.project-dialog-title{
+    font-size: 30px;
+    font-weight: 600 !important;
+}
+.project-dialog-screenshots-container{
+    display: flex;
+    justify-content: space-around;
+    overflow: auto;
+}
+.project-dialog-screenshots{
+    width: 30%;
+    border-radius: 5px;
+}
+.project-dialog-description{
+    padding: 20px 0px 0px 20px;
+    font-weight: 600 !important;
+}
+.project-dialog-content{
+    font-weight: 400 !important;
+    padding: 20px;
+}
+.project-dialog-button-container{
+    padding: 0px 20px 15px;
+}
+.project-dialog-buttons{
+    float: right;
+    color: var(--secondary) !important;
+    font-weight: 600 !important;
+    background-color: white !important;
+    margin-left: 10px !important;
+}
+
+@media screen and (max-width:1500px) {
+    .project-card-content{
+        padding: 5px 10px 10px !important;
+    }
+    .project-name-heading{
+        font-size: 1.2rem !important;
+        margin: 0 !important;
+    }
+    .view-more-button{
+        font-size: 0.8rem !important;
+        padding: 0 5px !important;
+    }
+}
+@media screen and (max-width:1000px) {
+    .project-card{
+        max-width: 50% !important;
+        width: 45% !important;
+    }
+    .project-name-heading{
+        font-size: 1rem !important;
+    }
+    .view-more-button{
+        font-size: 0.7rem !important;
+        padding: 0 5px !important;
+    }
+}
+@media screen and (max-width:700px) {
+    .project-card{
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    .project-card-image{
+        height: 85%;
+    }
+}

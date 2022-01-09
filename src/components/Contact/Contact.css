@@ -1,0 +1,122 @@
+.contact-main{
+    height: 100vh;
+    display: flex;
+}
+.contact-left-bar{
+    height: 100%;
+    width: 10%;
+    background-color: var(--secondary);
+}
+.contact-main-wrapper{
+    display: flex;
+    width: 100%;
+}
+.contact-left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+}
+.contact-right{
+    flex: 1;
+    background-color: var(--secondary);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-left-title{
+    font-size: 80px;
+    padding-bottom: 50px;
+}
+.contact-left-icons-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.contact-left-icons-div{
+    display: flex;
+    align-items: center;
+    text-decoration: none !important;
+    width: fit-content;
+}
+.contact-left-icon{
+    width: 2rem !important;
+    height: 2rem !important;
+    color: var(--secondary);
+}
+.contact-left-icons-text{
+    padding: 1px 10px;
+    font-size: 1.5rem !important;
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, var(--primary) 50%, var(--secondary) 50%);
+    transition: 
+      background-position .3s ease-in-out, 
+      color .3s ease-in-out !important;
+}
+.contact-left-icons-text:hover,
+.contact-left-icons-text:focus{
+    background-position: 0 100% !important;
+    color: #fff !important;
+  }
+
+.contact-right-title{
+    font-size: 80px;
+    color: white;
+}
+.contact-right-form{
+    margin-top: 20px;
+}
+.contact-right-form-textfield{
+    width: 100%;
+    margin-bottom: 20px !important;
+}
+.contact-right-form-textfield .MuiOutlinedInput-root fieldset{
+    border-color: white !important;
+}
+.contact-right-form-textfield label{
+    color: white !important;
+}
+.contact-right-form-textfield input{
+    color: white !important;
+}
+.contact-right-form-textfield textarea{
+    color: white !important;
+}
+.contact-right-form-button{
+    float: right;
+    color: white !important;
+    border-color: white !important;
+    transition: .3s ease-in-out !important;
+    font-weight: 600 !important;
+}
+.contact-right-form-button:hover{
+    box-shadow: rgba(255, 255, 255, 0.16) 0px 3px 6px,
+     rgba(255, 255, 255, 0.23) 0px 3px 6px;
+    background-color: white !important;
+    color: var(--secondary) !important;
+}
+
+@media screen and (max-width:1000px) {
+    .contact-main{
+        height: 200vh;
+    }
+    .contact-left-bar{
+        height: 200vh;
+        width: 5%;
+        background: linear-gradient(180deg, rgba(2,62,138,1) 0%, rgba(2,62,138,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+    }
+    .contact-main-wrapper{
+        flex-direction: column;
+    }
+    .contact-right{
+        padding: 0;
+    }
+    .contact-right-title{
+        padding: 20px;
+    }
+    .contact-right-form{
+        padding: 20px;
+    }
+}
