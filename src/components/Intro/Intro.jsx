@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import "./Intro.css";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
-import MyCartoon from "../../images/cartoon-me.png";
 import { ThemeContext } from "../../context";
 
 const Intro = () => {
@@ -41,7 +40,7 @@ const Intro = () => {
       </div>
       <div className="intro-right">
         <div className="intro-right-bg"></div>
-        <img className="intro-image"  src={MyCartoon} alt="MY Portrait" />
+        <img className="intro-image"  src='https://res.cloudinary.com/qziners/image/upload/v1641739219/cartoon-me_icdos0.png' alt="MY Portrait" />
       </div>
     </div>
   );

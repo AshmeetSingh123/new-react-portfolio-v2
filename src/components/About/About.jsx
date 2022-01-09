@@ -1,12 +1,5 @@
 import React, { useContext } from "react";
 import "./About.css";
-import HTML from "../../images/html5-logo.png";
-import CSS from "../../images/css-logo.png";
-import JS from "../../images/js-logo.png";
-import MONGODB from "../../images/mongodb-logo.png";
-import REACT from "../../images/react-logo.png";
-import NODE from "../../images/node-logo.png";
-import AboutMeBG from "../../images/about-me-bg.png";
 import { ThemeContext } from "../../context";
 
 const About = () => {
@@ -26,7 +19,7 @@ const About = () => {
           backgroundColor: darkMode ? "var(--secondary)" : "var(--secondary)",
         }}
       >
-        <img className="about-left-img" style={{backgroundColor: darkMode ? 'var(--primary)': 'black'}} src={AboutMeBG} alt="About-Me-BG" />
+        <img className="about-left-img" style={{backgroundColor: darkMode ? 'var(--primary)': 'black'}} src='https://res.cloudinary.com/qziners/image/upload/v1641739220/about-me-bg_eul3g6.png' alt="About-Me-BG" />
       </div>
       <div className="about-right">
         <h1 className="about-right-heading">About Me</h1>
@@ -48,37 +41,37 @@ const About = () => {
           <img
             style={{ backgroundColor: darkMode ? "var(--primary)" : "white" }}
             className="about-tech-logos"
-            src={HTML}
+            src='https://res.cloudinary.com/qziners/image/upload/v1641739403/tech%20logos/html5-logo_dt9lrc.png'
             alt="HTML"
           />
           <img
             style={{ backgroundColor: darkMode ? "var(--primary)" : "white" }}
             className="about-tech-logos"
-            src={CSS}
+            src='https://res.cloudinary.com/qziners/image/upload/v1641739403/tech%20logos/css-logo_reg6zv.png'
             alt="CSS"
           />
           <img
             style={{ backgroundColor: darkMode ? "var(--primary)" : "white" }}
             className="about-tech-logos"
-            src={JS}
+            src='https://res.cloudinary.com/qziners/image/upload/v1641739404/tech%20logos/js-logo_mhcyyf.png'
             alt="JS"
           />
           <img
             style={{ backgroundColor: darkMode ? "var(--primary)" : "white" }}
             className="about-tech-logos"
-            src={REACT}
+            src='https://res.cloudinary.com/qziners/image/upload/v1641739404/tech%20logos/react-logo_tttxax.png'
             alt="REACT"
           />
           <img
             style={{ backgroundColor: darkMode ? "var(--primary)" : "white" }}
             className="about-tech-logos"
-            src={NODE}
+            src='https://res.cloudinary.com/qziners/image/upload/v1641739404/tech%20logos/node-logo_zrpv32.png'
             alt="NODE"
           />
           <img
             style={{ backgroundColor: darkMode ? "var(--primary)" : "white" }}
             className="about-tech-logos"
-            src={MONGODB}
+            src='https://res.cloudinary.com/qziners/image/upload/v1641739404/tech%20logos/mongodb-logo_ktnqfi.png'
             alt="MONGODB"
           />
         </div>

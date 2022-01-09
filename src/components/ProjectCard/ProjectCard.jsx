@@ -3,12 +3,12 @@ import "./ProjectCard.css";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
-import ScreenShot from "../../images/Screenshot.png";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import DialogTitle from "@mui/material/DialogTitle";
 import Dialog from "@mui/material/Dialog";
 import { ThemeContext } from "../../context";
+import { Link } from "@mui/material";
 
 function SimpleDialog(props) {
   const { open, setOpen } = props;
@@ -20,42 +20,31 @@ function SimpleDialog(props) {
   return (
     <Dialog className="project-dialog" onClose={handleClose} open={open}>
       <DialogTitle className="project-dialog-title">
-        Name of the Project
+        {props.name && props.name}
       </DialogTitle>
       <div className="project-dialog-screenshots-container">
-        <img
-          className="project-dialog-screenshots"
-          src={ScreenShot}
-          alt="screenshot"
-        />
-        <img
-          className="project-dialog-screenshots"
-          src={ScreenShot}
-          alt="screenshot"
-        />
-        <img
-          className="project-dialog-screenshots"
-          src={ScreenShot}
-          alt="screenshot"
-        />
+        {
+          props.images.map((image) => (
+            <img
+              key={image}
+              className="project-dialog-screenshots"
+              src={image}
+              alt="screenshot"
+            />
+          ))
+        }
       </div>
       <Typography className="project-dialog-description">
         Description of the Project
       </Typography>
       <Typography className="project-dialog-content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ex
-        leo, molestie vitae fringilla eu, auctor eget ex. Sed at nibh porttitor,
-        laoreet elit a, tincidunt ligula. Sed at arcu eu purus accumsan tempor
-        ut elementum massa. Sed porttitor commodo imperdiet. Suspendisse et
-        risus vitae justo blandit condimentum sit amet nec libero. Maecenas sed
-        fringilla felis, et tincidunt tortor. Ut nunc lorem, tempor id porta
-        vitae, rutrum at tortor. Sed non tristique ipsum. Aliquam id eros ac
-        nulla lobortis eleifend a vestibulum sapien. Maecenas at placerat neque,
-        ac commodo risus. Aliquam ut nisl eu enim semper euismod a in ex.
+      {props.description && props.description}
       </Typography>
       <div className="project-dialog-button-container">
-        <Button className="project-dialog-buttons" onClick={handleClose}>
-          Github
+        <Button className="project-dialog-buttons">
+          <Link href={props.link && props.link} >
+            Github
+          </Link>
         </Button>
         <Button className="project-dialog-buttons" onClick={handleClose}>
           Close
@@ -65,7 +54,7 @@ function SimpleDialog(props) {
   );
 }
 
-const ProjectCard = () => {
+const ProjectCard = (props) => {
   const [open, setOpen] = React.useState(false);
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
@@ -85,7 +74,7 @@ const ProjectCard = () => {
         className="project-card-image"
         component="img"
         height="140"
-        image={ScreenShot}
+        image={props.images[0]}
         alt="screenshot"
       />
       <CardContent className="project-card-content">
@@ -95,7 +84,7 @@ const ProjectCard = () => {
           component="div"
           className="project-name-heading"
         >
-          Project 1
+          {props.name && props.name}
         </Typography>
         <Button
           className="view-more-button"
@@ -106,7 +95,7 @@ const ProjectCard = () => {
           View More
         </Button>
       </CardContent>
-      <SimpleDialog open={open} setOpen={setOpen} onClose={handleClose} />
+      <SimpleDialog name={props.name} description={props.description} link={props.link} images={props.images} open={open} setOpen={setOpen} onClose={handleClose} />
     </Card>
   );
 };
