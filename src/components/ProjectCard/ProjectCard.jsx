@@ -92,7 +92,7 @@ const ProjectCard = (props) => {
           onClick={handleClickOpen}
           style={{backgroundColor: darkMode ? 'white' : 'black', color: darkMode ? 'var(--secondary)' : 'white', fontWeight: darkMode ? '600' : '500'}}
         >
-          View More
+          More
         </Button>
       </CardContent>
       <SimpleDialog name={props.name} description={props.description} link={props.link} images={props.images} open={open} setOpen={setOpen} onClose={handleClose} />

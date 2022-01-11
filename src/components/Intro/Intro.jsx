@@ -45,5 +45,4 @@ const Intro = () => {
     </div>
   );
 };
-// style={{border: darkMode ? '5px solid black' : '5px solid white'}}
 export default Intro;
